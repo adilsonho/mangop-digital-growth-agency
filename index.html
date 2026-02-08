@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mangop Digital Growth Agency</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    :root {
+      --blue: #0A2540;
+      --graphite: #1E1E1E;
+      --accent: #FF8A00;
+      --light: #F7F9FC;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--light);
+      color: var(--graphite);
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #0A2540, #06192E);
+      color: #fff;
+    }
+
+    .hero-container {
+      max-width: 1100px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-bottom: 30px;
+    }
+
+    .cta-btn {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 16px 32px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 10px 30px rgba(255, 138, 0, 0.35);
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    .hero-visual {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+
+    .hero-visual i {
+      font-size: 3rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .hero-visual h3 {
+      margin-bottom: 10px;
+    }
+
+    /* MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .modal-content {
+      background: #fff;
+      width: 100%;
+      max-width: 500px;
+      padding: 30px;
+      border-radius: 12px;
+      position: relative;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 1.3rem;
+      cursor: pointer;
+      color: #888;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, select {
+      padding: 14px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-size: 0.95rem;
+    }
+
+    .submit-btn {
+      background: var(--blue);
+      color: #fff;
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .success {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      color: green;
+      font-weight: 600;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 900px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-container">
+      <div>
+        <h1>Crescimento Digital Orientado por Dados</h1>
+        <p>
+          A Mangop Digital Growth Agency ajuda empresas a escalar vendas com anúncios Meta,
+          rastreamento profissional e estratégias de performance.
+        </p>
+        <button class="cta-btn" onclick="openModal()">Falar com um Especialista</button>
+      </div>
+
+      <div class="hero-visual">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3>Growth Beyond Clicks</h3>
+        <p>Mais leads, mais vendas e menos desperdício em anúncios.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+
+      <h2>Fale com um Especialista</h2>
+      <p>Preencha os dados abaixo e entraremos em contato.</p>
+
+      <form id="leadForm">
+        <input type="text" placeholder="Nome" required>
+        <input type="email" placeholder="E-mail" required>
+        <input type="tel" placeholder="Telefone" required>
+
+        <select required>
+          <option value="">Área de Interesse</option>
+          <option>Meta Ads</option>
+          <option>Pixel & Conversion API</option>
+          <option>Gestão de Tráfego</option>
+          <option>Consultoria de Performance</option>
+        </select>
+
+        <button class="submit-btn" type="submit">Enviar</button>
+      </form>
+
+      <div class="success" id="successMessage">
+        ✅ Sucesso! Entraremos em contato em breve.
+      </div>
+    </div>
+  </div>
+
+ <script>
+  function openModal() {
+    document.getElementById('modal').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+  }
+
+  document.getElementById('leadForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const nome = this.querySelector('input[placeholder="Nome"]').value;
+    const email = this.querySelector('input[placeholder="E-mail"]').value;
+    const telefone = this.querySelector('input[placeholder="Telefone"]').value;
+    const interesse = this.querySelector('select').value;
+
+    const mensagem = `Olá, me chamo ${nome}.
+Tenho interesse em: ${interesse}.
+Email: ${email}
+Telefone: ${telefone}`;
+
+    if (typeof fbq === 'function') {
+      fbq('track', 'Lead');
+    }
+
+    const whatsappURL = `https://wa.me/5511941949178?text=${encodeURIComponent(mensagem)}`;
+
+    window.open(whatsappURL, '_blank');
+
+    this.reset();
+    closeModal();
+  });
+</script>
+
+
+</body>
+</html>

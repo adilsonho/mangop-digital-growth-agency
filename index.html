@@ -1,266 +1,325 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mangop Digital Growth Agency</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mangop Digital Growth Agency | Portfólio & Reunião Estratégica</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --blue: #0A2540;
-      --graphite: #1E1E1E;
-      --accent: #FF8A00;
-      --light: #F7F9FC;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-
     body {
-      background: var(--light);
-      color: var(--graphite);
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f172a, #0b1120);
     }
 
-    /* HERO */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #0A2540, #06192E);
-      color: #fff;
+    .glass {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(16px);
     }
 
-    .hero-container {
-      max-width: 1100px;
+    .glow {
+      box-shadow: 0 20px 60px rgba(249, 115, 22, 0.22);
+    }
+
+    .input-style {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 12px 14px;
       width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: center;
+      transition: 0.25s;
     }
 
-    .hero h1 {
-      font-size: 3rem;
+    .input-style:focus {
+      outline: none;
+      border-color: #f97316;
+      box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #f97316, #facc15);
+      color: #0f172a;
+      border-radius: 14px;
+      padding: 13px;
       font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 20px;
+      transition: .2s;
     }
 
-    .hero p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-      margin-bottom: 30px;
-    }
-
-    .cta-btn {
-      background: var(--accent);
-      color: #fff;
-      border: none;
-      padding: 16px 32px;
-      font-size: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s;
-      box-shadow: 0 10px 30px rgba(255, 138, 0, 0.35);
-    }
-
-    .cta-btn:hover {
+    .btn-primary:hover {
       transform: translateY(-2px);
-      opacity: 0.9;
-    }
-
-    .hero-visual {
-      background: rgba(255,255,255,0.08);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      padding: 40px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-    }
-
-    .hero-visual i {
-      font-size: 3rem;
-      color: var(--accent);
-      margin-bottom: 20px;
-    }
-
-    .hero-visual h3 {
-      margin-bottom: 10px;
-    }
-
-    /* MODAL */
-    .modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.6);
-      justify-content: center;
-      align-items: center;
-      z-index: 999;
-    }
-
-    .modal-content {
-      background: #fff;
-      width: 100%;
-      max-width: 500px;
-      padding: 30px;
-      border-radius: 12px;
-      position: relative;
-      animation: fadeIn 0.3s ease;
-    }
-
-    .close {
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      font-size: 1.3rem;
-      cursor: pointer;
-      color: #888;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    input, select {
-      padding: 14px;
-      border-radius: 8px;
-      border: 1px solid #ddd;
-      font-size: 0.95rem;
-    }
-
-    .submit-btn {
-      background: var(--blue);
-      color: #fff;
-      border: none;
-      padding: 14px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 600;
-    }
-
-    .success {
-      display: none;
-      text-align: center;
-      padding: 20px;
-      color: green;
-      font-weight: 600;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
-    /* RESPONSIVO */
-    @media (max-width: 900px) {
-      .hero-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
+      box-shadow: 0 15px 35px rgba(249, 115, 22, 0.35);
     }
   </style>
 </head>
-<body>
+<body class="text-white">
+  <main class="max-w-7xl mx-auto px-6 py-10 space-y-10">
+    <section class="grid lg:grid-cols-2 gap-8 items-center">
+      <div class="space-y-5">
+        <p class="inline-block text-sm font-semibold text-orange-300 bg-orange-500/10 px-3 py-1 rounded-full">Portfólio Mangop</p>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Performance Digital para Empresas que Querem Escalar</h1>
+        <p class="text-slate-300 text-lg">Criamos estratégias orientadas por dados com foco em aquisição, conversão e crescimento sustentável.</p>
+        <div class="flex flex-wrap gap-3 text-sm">
+          <span class="glass rounded-full px-3 py-1">+150 empresas impactadas</span>
+          <span class="glass rounded-full px-3 py-1">Meta Ads</span>
+          <span class="glass rounded-full px-3 py-1">Tracking Avançado</span>
+        </div>
+      </div>
+      <div class="glass rounded-3xl p-7 glow space-y-4">
+        <h2 class="text-2xl font-bold">Resultados que entregamos</h2>
+        <div class="grid sm:grid-cols-3 gap-3 text-center">
+          <div class="bg-white/5 rounded-2xl p-4">
+            <p class="text-3xl font-bold text-orange-300">+212%</p>
+            <p class="text-xs text-slate-300">Aumento médio de leads</p>
+          </div>
+          <div class="bg-white/5 rounded-2xl p-4">
+            <p class="text-3xl font-bold text-orange-300">-38%</p>
+            <p class="text-xs text-slate-300">Redução de CPL</p>
+          </div>
+          <div class="bg-white/5 rounded-2xl p-4">
+            <p class="text-3xl font-bold text-orange-300">4.7x</p>
+            <p class="text-xs text-slate-300">ROAS em campanhas</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-container">
-      <div>
-        <h1>Crescimento Digital Orientado por Dados</h1>
-        <p>
-          A Mangop Digital Growth Agency ajuda empresas a escalar vendas com anúncios Meta,
-          rastreamento profissional e estratégias de performance.
-        </p>
-        <button class="cta-btn" onclick="openModal()">Falar com um Especialista</button>
+    <section class="grid md:grid-cols-3 gap-5">
+      <article class="glass rounded-2xl p-5">
+        <h3 class="font-semibold text-lg mb-2">E-commerce de Moda</h3>
+        <p class="text-slate-300 text-sm">Escala de vendas com criativos UGC + campanhas de remarketing segmentadas.</p>
+      </article>
+      <article class="glass rounded-2xl p-5">
+        <h3 class="font-semibold text-lg mb-2">Educação Online</h3>
+        <p class="text-slate-300 text-sm">Funil de webinars com automações e rastreamento completo de eventos.</p>
+      </article>
+      <article class="glass rounded-2xl p-5">
+        <h3 class="font-semibold text-lg mb-2">Serviços B2B</h3>
+        <p class="text-slate-300 text-sm">Geração de leads qualificados com foco em CAC previsível e pipeline comercial.</p>
+      </article>
+    </section>
+
+    <section class="grid lg:grid-cols-2 gap-8 items-start">
+      <div class="glass rounded-3xl p-6 space-y-4">
+        <h2 class="text-2xl font-bold">Reunião Estratégica</h2>
+        <p class="text-slate-300">Reserve 30 minutos para analisarmos seu cenário e definir os próximos passos de crescimento.</p>
+
+        <div class="space-y-3 text-sm">
+          <p class="flex justify-between"><span>Duração</span><span class="text-orange-300 font-medium">30 minutos</span></p>
+          <p class="flex justify-between"><span>Formato</span><span class="text-orange-300 font-medium">Google Meet</span></p>
+          <p class="flex justify-between"><span>Fuso horário</span><span id="timezone" class="text-orange-300 font-medium"></span></p>
+        </div>
       </div>
 
-      <div class="hero-visual">
-        <i class="fa-solid fa-chart-line"></i>
-        <h3>Growth Beyond Clicks</h3>
-        <p>Mais leads, mais vendas e menos desperdício em anúncios.</p>
+      <div class="bg-white text-slate-800 rounded-3xl p-8 glow">
+        <h3 class="text-2xl font-bold mb-5">Agende agora</h3>
+
+        <div class="space-y-3">
+          <input type="date" id="date" class="input-style">
+
+          <select id="time" class="input-style">
+            <option value="">Selecione horário</option>
+          </select>
+
+          <input type="text" id="name" placeholder="Nome completo" class="input-style">
+          <input type="email" id="email" placeholder="Email profissional" class="input-style">
+
+          <div class="flex gap-2">
+            <select id="countrySelect" class="input-style max-w-[180px]">
+              <option value="+244">🇦🇴 +244</option>
+              <option value="+258">🇲🇿 +258</option>
+              <option value="+238">🇨🇻 +238</option>
+              <option value="+351">🇵🇹 +351</option>
+              <option value="+55">🇧🇷 +55</option>
+              <option value="+44">🇬🇧 +44</option>
+              <option value="+1">🇺🇸 +1</option>
+            </select>
+            <input type="tel" id="phone" placeholder="Número" class="input-style" inputmode="numeric" maxlength="15" required>
+          </div>
+
+          <input type="text" id="company" placeholder="Empresa" class="input-style">
+          <textarea id="description" placeholder="Objetivo ou desafio atual" class="input-style min-h-[110px]"></textarea>
+
+          <button onclick="book()" class="btn-primary w-full">Confirmar Reunião</button>
+          <p id="message" class="text-center text-sm font-medium"></p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- MODAL -->
-  <div class="modal" id="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycby09-6aL4tA4ufcTCqC7hKrCrllRdvZnrT_Ge4LwlVfv67GKblabJzw3RpOHzUQt3ZAbQ/exec";
+const START = 9;
+const END = 22;
 
-      <h2>Fale com um Especialista</h2>
-      <p>Preencha os dados abaixo e entraremos em contato.</p>
+const dateInput = document.getElementById("date");
+const timeSelect = document.getElementById("time");
+const messageBox = document.getElementById("message");
+const button = document.querySelector("button");
+const phoneInput = document.getElementById("phone");
+const countrySelect = document.getElementById("countrySelect");
 
-      <form id="leadForm">
-        <input type="text" placeholder="Nome" required>
-        <input type="email" placeholder="E-mail" required>
-        <input type="tel" placeholder="Telefone" required>
-
-        <select required>
-          <option value="">Área de Interesse</option>
-          <option>Meta Ads</option>
-          <option>Pixel & Conversion API</option>
-          <option>Gestão de Tráfego</option>
-          <option>Consultoria de Performance</option>
-        </select>
-
-        <button class="submit-btn" type="submit">Enviar</button>
-      </form>
-
-      <div class="success" id="successMessage">
-        ✅ Sucesso! Entraremos em contato em breve.
-      </div>
-    </div>
-  </div>
-
- <script>
-  function openModal() {
-    document.getElementById('modal').style.display = 'flex';
+async function parseResponse(res) {
+  if (!res.ok) {
+    throw new Error(`HTTP ${res.status}`);
   }
 
-  function closeModal() {
-    document.getElementById('modal').style.display = 'none';
+  const contentType = res.headers.get("content-type") || "";
+  const raw = await res.text();
+
+  if (!raw) return {};
+
+  if (contentType.includes("application/json")) {
+    return JSON.parse(raw);
   }
 
-  document.getElementById('leadForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+  try {
+    return JSON.parse(raw);
+  } catch {
+    throw new Error("Resposta inválida do servidor");
+  }
+}
 
-    const nome = this.querySelector('input[placeholder="Nome"]').value;
-    const email = this.querySelector('input[placeholder="E-mail"]').value;
-    const telefone = this.querySelector('input[placeholder="Telefone"]').value;
-    const interesse = this.querySelector('select').value;
+async function callScript(payload, method = "POST") {
+  if (method === "GET") {
+    const query = new URLSearchParams(payload).toString();
+    const res = await fetch(`${SCRIPT_URL}?${query}`, { method: "GET" });
+    return parseResponse(res);
+  }
 
-    const mensagem = `Olá, me chamo ${nome}.
-Tenho interesse em: ${interesse}.
-Email: ${email}
-Telefone: ${telefone}`;
-
-    if (typeof fbq === 'function') {
-      fbq('track', 'Lead');
-    }
-
-    const whatsappURL = `https://wa.me/5511941949178?text=${encodeURIComponent(mensagem)}`;
-
-    window.open(whatsappURL, '_blank');
-
-    this.reset();
-    closeModal();
+  const body = new URLSearchParams(payload).toString();
+  const res = await fetch(SCRIPT_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
+    body
   });
+
+  return parseResponse(res);
+}
+
+phoneInput.addEventListener("input", function () {
+  this.value = this.value.replace(/\D/g, "");
+});
+
+document.getElementById("timezone").innerText = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+const today = new Date().toISOString().split("T")[0];
+dateInput.setAttribute("min", today);
+dateInput.addEventListener("change", loadTimes);
+
+function loadTimes() {
+  const date = dateInput.value;
+  if (!date) return;
+
+  messageBox.textContent = "Carregando horários...";
+
+  callScript({ action: "getBusy", date }, "GET")
+    .then(data => {
+      timeSelect.innerHTML = "<option value=''>Selecione horário</option>";
+
+      if (data.busy === "full") {
+        messageBox.innerHTML = "<span class='text-red-600'>Este dia já está totalmente lotado.</span>";
+        return;
+      }
+
+      const now = new Date();
+      const selectedDate = new Date(date + "T00:00:00");
+
+      for (let h = START; h < END; h++) {
+        const hour = `${h < 10 ? "0" : ""}${h}:00`;
+
+        if (selectedDate.toDateString() === now.toDateString() && h <= now.getHours()) {
+          continue;
+        }
+
+        if (!data.busy || !data.busy.includes(hour)) {
+          const opt = document.createElement("option");
+          opt.value = hour;
+          opt.innerText = hour;
+          timeSelect.appendChild(opt);
+        }
+      }
+
+      messageBox.textContent = "";
+    })
+    .catch(error => {
+      console.error("Erro ao carregar horários:", error);
+      messageBox.innerHTML = "<span class='text-red-600'>Erro ao carregar horários. Verifique sua conexão e tente novamente.</span>";
+    });
+}
+
+function validateEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function book() {
+  const date = dateInput.value;
+  const time = timeSelect.value;
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const countryCode = countrySelect.value;
+  const phoneNumber = phoneInput.value.trim();
+  const company = document.getElementById("company").value.trim();
+  const description = document.getElementById("description").value.trim();
+
+  if (!date || !time || !name || !email || !phoneNumber) {
+    messageBox.innerHTML = "<span class='text-red-600'>Preencha todos os campos obrigatórios.</span>";
+    return;
+  }
+
+  if (!validateEmail(email)) {
+    messageBox.innerHTML = "<span class='text-red-600'>Email inválido.</span>";
+    return;
+  }
+
+  if (phoneNumber.length < 7) {
+    messageBox.innerHTML = "<span class='text-red-600'>Número inválido.</span>";
+    return;
+  }
+
+  button.disabled = true;
+  button.innerHTML = "Agendando...";
+
+  const payload = {
+    action: "book",
+    date,
+    time,
+    name,
+    email,
+    phone: countryCode + phoneNumber,
+    company,
+    description
+  };
+
+  callScript(payload)
+    .then(data => {
+      if (data.status === "success") {
+        messageBox.innerHTML = "<span class='text-green-600'>Reunião confirmada! Redirecionando...</span>";
+        setTimeout(() => { window.location.href = "thank-you.html"; }, 900);
+        return;
+      }
+
+      if (data.status === "occupied") {
+        messageBox.innerHTML = "<span class='text-red-600'>Horário ocupado. Escolha outro.</span>";
+        loadTimes();
+      } else if (data.status === "full") {
+        messageBox.innerHTML = "<span class='text-red-600'>Este dia já está lotado.</span>";
+      } else if (data.status === "outside_business_hours") {
+        messageBox.innerHTML = "<span class='text-red-600'>Fora do horário comercial.</span>";
+      } else {
+        messageBox.innerHTML = `<span class='text-red-600'>${data.message || "Erro inesperado."}</span>`;
+      }
+
+      button.disabled = false;
+      button.innerHTML = "Confirmar Reunião";
+    })
+    .catch(error => {
+      console.error("Erro de conexão:", error);
+      messageBox.innerHTML = "<span class='text-red-600'>Erro de conexão com o servidor.</span>";
+      button.disabled = false;
+      button.innerHTML = "Confirmar Reunião";
+    });
+}
 </script>
-
-
 </body>
 </html>

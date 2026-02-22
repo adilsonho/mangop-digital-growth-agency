@@ -1,35 +1,40 @@
-A Mangop Digital é uma landing page de alta performance desenvolvida para uma agência focada em tráfego pago, SEO e design estratégico. O projeto foi construído com foco em conversão, velocidade de carregamento e design moderno.
+# Mangop Digital Growth Agency
 
-🛠️ Tecnologias Utilizadas
-O projeto utiliza o que há de mais moderno no desenvolvimento web front-end:
+A **Mangop Digital** é uma landing page de alta performance, projetada estrategicamente para agências que buscam escalar resultados através de tráfego pago, SEO e design focado em conversão.
 
-HTML5 & CSS3: Estrutura semântica e estilização avançada.
+[Visualizar o Projeto Online](https://adilsonho.github.io/mangop-digital-growth-agency/)
 
-Tailwind CSS: Framework utilitário para um design responsivo e consistente.
+---
 
-JavaScript: Interatividade e validação de formulários.
+### 🛠️ Tecnologias & Ferramentas
 
-Lucide Icons: Ícones minimalistas e leves.
+O projeto utiliza uma stack moderna para garantir velocidade e responsividade:
 
-Git & GitHub: Controle de versão e deploy via GitHub Pages.
+* **Front-end:** HTML5, CSS3, JavaScript (ES6+)
+* **Estilização:** [Tailwind CSS](https://tailwindcss.com/)
+* **Ícones:** [Lucide Icons](https://lucide.dev/)
+* **Deploy:** GitHub Pages
+* **Versionamento:** Git
 
-📂 Estrutura do Projeto
-Plaintext
-├── img/                # Logos, ícones e imagens otimizadas
-├── index.html          # Página principal da agência
-├── thank-you.html      # Página de conversão (pós-agendamento)
-├── style.css           # CSS final compilado
-├── input.css           # Arquivo de entrada do Tailwind
-└── tailwind.config.js  # Configurações personalizadas do Tailwind
-✨ Funcionalidades
-Design Responsivo: Adaptado para celulares, tablets e desktops.
+---
 
-Formulário de Agendamento: Integrado com página de agradecimento dedicada.
+### ✨ Principais Funcionalidades
 
-Seção de Serviços: Exibição clara das especialidades da agência.
+- 📱 **Design Ultra-Responsivo:** Experiência otimizada para Desktop, Tablet e Mobile.
+- 🎯 **Foco em Conversão (CRO):** Seções planejadas para guiar o usuário até o agendamento.
+- ⚡ **Alta Performance:** Código limpo e CSS otimizado para carregamento instantâneo.
+- 📩 **Página de Agradecimento:** Fluxo completo de conversão pós-formulário.
+- 🛠️ **Fácil Customização:** Arquivos de configuração do Tailwind prontos para mudanças de marca.
 
-Social Proof: Áreas prontas para depoimentos e logos de clientes.
+---
 
-Otimização de Performance: Carregamento rápido utilizando Tailwind e imagens leves.
+### 📂 Estrutura de Arquivos
 
-Desenvolvido por Adilson
+```bash
+├── 📁 img/                # Ativos visuais (Logos, Ícones, WebP)
+├── 📄 index.html          # Landing Page Principal
+├── 📄 thank-you.html      # Página de Sucesso (Pós-conversão)
+├── 📄 style.css           # Output de produção do Tailwind
+├── 📄 input.css           # Estilos base e diretivas Tailwind
+├── 📄 tailwind.config.js  # Regras de design e temas
+└── 📄 package.json        # Scripts de automação

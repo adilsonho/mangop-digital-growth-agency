@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@layer base {
+  html { 
+    scroll-behavior: smooth; 
+  }
+  body {
+    @apply antialiased text-white;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #0b1120);
+  }
+}
+
+@layer components {
+  .glass {
+    @apply backdrop-blur-[16px];
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .glow {
+    box-shadow: 0 20px 60px rgba(249, 115, 22, 0.22);
+  }
+
+  .input-style {
+    @apply bg-[#0f172a] text-slate-200 border border-orange-500/35 rounded-[14px] px-[14px] py-[12px] w-full transition-all duration-200;
+  }
+
+  .input-style:focus {
+    @apply outline-none border-orange-500 ring-4 ring-orange-500/20;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-orange-500 to-yellow-400 text-[#0f172a] rounded-[14px] p-[13px] font-bold transition-all duration-200 inline-block;
+  }
+
+  .btn-primary:hover {
+    @apply -translate-y-0.5 shadow-[0_15px_35px_rgba(249,115,22,0.35)];
+  }
+
+  .tech-logo {
+    @apply w-9 h-9 grayscale opacity-55 transition-all duration-200 hover:grayscale-0 hover:opacity-100 hover:-translate-y-0.5;
+  }
+}

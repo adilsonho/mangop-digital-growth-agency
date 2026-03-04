@@ -1,25 +1,26 @@
-@import "tailwindcss";
+@import "https://unpkg.com/tailwindcss@4.0.0/index.css";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", sans-serif;
   --color-orange-100: oklch(95.4% .038 75.164);
   --color-orange-300: oklch(83.7% .128 66.29);
-  --color-orange-500: oklch(70.5% .213 47.604);
+  --color-orange-500: #fe6e00;
   --color-yellow-400: oklch(85.2% .199 91.936);
   --color-slate-300: oklch(86.9% .022 252.894);
 }
 
-@layer base {
-  body {
-    @apply text-white antialiased;
-    background: linear-gradient(135deg, #0f172a, #0b1120);
-    font-family: 'Inter', sans-serif;
-  }
+body {
+  background: linear-gradient(135deg, #0f172a, #0b1120);
+  color: white;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
+/* Componentes que o Tailwind v4 precisa reconhecer */
 @layer components {
   .glass {
-    @apply backdrop-blur-xl;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.12);
   }
@@ -29,32 +30,18 @@
   }
 
   .btn-primary {
-    @apply font-bold text-[#0f172a] transition-all duration-200 text-center cursor-pointer rounded-[14px] px-6 py-3;
-    background: linear-gradient(to right, #f97316, #fbbf24);
-  }
-
-  .btn-primary:hover {
-    @apply -translate-y-0.5;
-    box-shadow: 0 15px 35px rgba(249, 115, 22, 0.35);
+    @apply font-bold transition-all duration-200 text-center cursor-pointer rounded-[14px] px-6 py-3 inline-block;
+    background: linear-gradient(to right, #fe6e00, #fbbf24);
+    color: #0f172a;
   }
 
   .input-style {
     @apply w-full bg-[#0f172a] border border-orange-500/35 rounded-[14px] px-4 py-3 text-slate-200 transition-all outline-none;
   }
 
-  .input-style:focus {
-    @apply border-orange-500 ring-4 ring-orange-500/20;
-  }
-
-  /* FIX DE PERFORMANCE PARA AS LOGOS */
   .tech-logo {
     @apply opacity-55 grayscale transition-all duration-200;
     width: auto;
-    max-width: 120px;
-    height: 40px; /* Altura fixa para evitar pulos no layout (CLS) */
-  }
-
-  .tech-logo:hover {
-    @apply opacity-100 grayscale-0 -translate-y-0.5;
+    height: 40px;
   }
 }

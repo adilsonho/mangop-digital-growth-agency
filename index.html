@@ -3,24 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
-  <title>Mangop Digital Growth Agency | Escalabilidade de negócios</title>
-  <meta name="description" content="A Mangop Digital ajuda empresas em fase de escala a aumentar lucros com gestão de tráfego inteligente, landing pages de alta conversão e desenvolvimento de sistemas sob medida." />
+  <title>Mangop Digital Growth Agency | Escalabilidade</title>
   
-  <link rel="icon" type="image/svg+xml" href="./img/logo/logo.svg">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
 
-  <link rel="preload" href="style.css" as="style">
-  <link rel="stylesheet" href="style.css">
-  
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mangop.digital/"> 
-  <meta property="og:title" content="Mangop Digital | Growth Agency">
-  <meta property="og:image" content="./img/logo/logo.svg">
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+  <style type="text/tailwindcss">
+    @theme {
+      --font-sans: "Inter", sans-serif;
+      --color-orange-500: #fe6e00;
+    }
+
+    @layer components {
+      .glass {
+        @apply backdrop-blur-xl;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+      .glow { box-shadow: 0 20px 60px rgba(249, 115, 22, 0.22); }
+      
+      .btn-primary {
+        @apply font-bold text-[#0f172a] transition-all duration-200 text-center cursor-pointer rounded-[14px] px-6 py-3 inline-block;
+        background: linear-gradient(to right, #fe6e00, #fbbf24);
+      }
+      
+      .input-style {
+        @apply w-full bg-[#0f172a] border border-orange-500/35 rounded-[14px] px-4 py-3 text-slate-200 transition-all outline-none;
+      }
+
+      .tech-logo {
+        @apply opacity-55 grayscale transition-all duration-200;
+        width: auto;
+        height: 40px;
+      }
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f172a, #0b1120);
+      @apply text-white antialiased;
+    }
+  </style>
 </head>
 
 <body class="text-white bg-[#0f172a]">

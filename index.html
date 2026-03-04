@@ -3,15 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mangop Digital Growth Agency | Escalabilidade</title>
+  <title>Mangop Digital Growth Agency</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
-</head>
+  <script src="https://cdn.tailwindcss.com"></script>
 
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            orange: {
+              100: '#fef3c7',
+              300: '#fdba74',
+              500: '#fe6e00',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style type="text/css">
+    body {
+      background-color: #0f172a;
+      color: white;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .glow {
+      box-shadow: 0 0 40px rgba(254, 110, 0, 0.15);
+    }
+    .btn-primary {
+      background: linear-gradient(90deg, #fe6e00 0%, #fbbf24 100%);
+      color: #0f172a;
+      font-weight: 800;
+      border-radius: 14px;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(254, 110, 0, 0.4);
+    }
+    .tech-logo {
+      height: 40px;
+      width: auto;
+      filter: grayscale(100%);
+      opacity: 0.6;
+      transition: all 0.3s ease;
+    }
+    .tech-logo:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+    .input-style {
+      background: #0f172a;
+      border: 1px solid rgba(254, 110, 0, 0.3);
+      border-radius: 12px;
+      padding: 12px;
+      color: white;
+      outline: none;
+    }
+    .input-style:focus {
+      border-color: #fe6e00;
+      box-shadow: 0 0 0 2px rgba(254, 110, 0, 0.2);
+    }
+  </style>
+</head>
 <body class="text-white bg-[#0f172a]">
   <main class="max-w-7xl mx-auto px-6 py-10 space-y-10">
     <section class="grid lg:grid-cols-2 gap-8 items-center">

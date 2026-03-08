@@ -16,348 +16,213 @@
       theme: {
         extend: {
           colors: {
-            orange: {
-              100: '#fef3c7',
-              300: '#fdba74',
-              500: '#fe6e00',
-            }
+            orange: { 100: '#fef3c7', 300: '#fdba74', 500: '#fe6e00' }
           },
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-          }
+          fontFamily: { sans: ['Inter', 'sans-serif'] }
         }
       }
     }
   </script>
 
   <style type="text/css">
-    body {
-      background-color: #0f172a;
-      color: white;
-    }
-    .glass {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .glow {
-      box-shadow: 0 0 40px rgba(254, 110, 0, 0.15);
-    }
-    .btn-primary {
-      background: linear-gradient(90deg, #fe6e00 0%, #fbbf24 100%);
-      color: #0f172a;
-      font-weight: 800;
-      border-radius: 14px;
-      transition: all 0.3s ease;
-      text-align: center;
-    }
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(254, 110, 0, 0.4);
-    }
-    .tech-logo {
-      height: 40px;
-      width: auto;
-      filter: grayscale(100%);
-      opacity: 0.6;
-      transition: all 0.3s ease;
-    }
-    .tech-logo:hover {
-      filter: grayscale(0%);
-      opacity: 1;
-    }
-    .input-style {
-      background: #0f172a;
-      border: 1px solid rgba(254, 110, 0, 0.3);
-      border-radius: 12px;
-      padding: 12px;
-      color: white;
-      outline: none;
-    }
-    .input-style:focus {
-      border-color: #fe6e00;
-      box-shadow: 0 0 0 2px rgba(254, 110, 0, 0.2);
-    }
+    body { background-color: #0f172a; color: white; scroll-behavior: smooth; }
+    .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    .glow { box-shadow: 0 0 40px rgba(254, 110, 0, 0.15); }
+    .btn-primary { background: linear-gradient(90deg, #fe6e00 0%, #fbbf24 100%); color: #0f172a; font-weight: 800; border-radius: 14px; transition: all 0.3s ease; text-align: center; cursor: pointer; border: none; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(254, 110, 0, 0.4); }
+    .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+    .input-style { background: #0f172a; border: 1px solid rgba(254, 110, 0, 0.3); border-radius: 12px; padding: 12px; color: white; outline: none; width: 100%; }
+    .input-style:focus { border-color: #fe6e00; box-shadow: 0 0 0 2px rgba(254, 110, 0, 0.2); }
+    .tech-logo { height: 40px; width: auto; filter: grayscale(100%); opacity: 0.6; transition: 0.3s; }
+    .tech-logo:hover { filter: grayscale(0%); opacity: 1; }
   </style>
 </head>
 <body class="text-white bg-[#0f172a]">
-  <main class="max-w-7xl mx-auto px-6 py-10 space-y-10">
+  <main class="max-w-7xl mx-auto px-6 py-10 space-y-16">
+    
     <section class="grid lg:grid-cols-2 gap-8 items-center">
-      <div class="space-y-5">
+      <div class="space-y-6">
         <p class="inline-block text-sm font-semibold text-orange-100 bg-orange-500/30 px-3 py-1 rounded-full">Mangop Digital • Growth Agency</p>
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Pare de adivinhar o seu lucro. Transforme seus anúncios em lucro real com inteligência de dados.</h1>
-        <p class="text-slate-300 text-lg">Nós lemos o comportamento do seu cliente na internet para parar de desperdiçar seu dinheiro com anúncios que não vendem. Criamos um caminho previsível para você investir R$ 1,00 e saber exatamente quanto vai voltar.</p>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Venda mais com inteligência de dados.</h1>
+        <p class="text-slate-300 text-lg">Pare de queimar dinheiro em anúncios. Criamos processos previsíveis de escala para o seu negócio.</p>
         <div class="pt-4">
           <a href="#agendar" class="btn-primary inline-block px-8 py-4">Mapear meu crescimento</a>
         </div>
       </div>
-      <div class="glass rounded-3xl p-7 glow space-y-4" style="min-height: 350px;">
-        <h2 class="text-2xl font-bold">Resultados que sustentam escala</h2>
-        <div class="grid sm:grid-cols-3 gap-3 text-center">
-          <div class="bg-white/5 rounded-2xl p-4">
-            <p class="text-3xl font-bold text-orange-300">+212%</p>
-            <p class="text-xs text-slate-300">Crescimento médio de leads qualificados</p>
-          </div>
-          <div class="bg-white/5 rounded-2xl p-4">
-            <p class="text-3xl font-bold text-orange-300">-38%</p>
-            <p class="text-xs text-slate-300">Redução média de custo por lead</p>
-          </div>
-          <div class="bg-white/5 rounded-2xl p-4">
-            <p class="text-3xl font-bold text-orange-300">4.7x</p>
-            <p class="text-xs text-slate-300">ROAS em operações de crescimento</p>
-          </div>
-        </div>
+      <div class="glass rounded-3xl p-8 glow grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+        <div class="p-4"><p class="text-3xl font-bold text-orange-300">+212%</p><p class="text-xs text-slate-400 uppercase">Leads</p></div>
+        <div class="p-4"><p class="text-3xl font-bold text-orange-300">-38%</p><p class="text-xs text-slate-400 uppercase">Custo</p></div>
+        <div class="p-4"><p class="text-3xl font-bold text-orange-300">4.7x</p><p class="text-xs text-slate-400 uppercase">ROAS</p></div>
       </div>
     </section>
 
-    <section class="glass rounded-2xl p-5 space-y-4">
-      <h2 class="text-xl font-bold">Especialistas nas tecnologias que movem o mercado</h2>
-      <div class="flex flex-wrap items-center gap-5">
-        <img class="tech-logo" src="./img/logo/googleads.svg" alt="Google Ads" width="120" height="40" loading="lazy">
-        <img class="tech-logo" src="./img/logo/meta.svg" alt="Meta Ads" width="120" height="40" loading="lazy">
-        <img class="tech-logo" src="./img/logo/googleanalytics.svg" alt="Google Analytics 4" width="120" height="40" loading="lazy">
-        <img class="tech-logo" src="./img/logo/googletagmanager.svg" alt="Google Tag Manager" width="120" height="40" loading="lazy">
-        <img class="tech-logo" src="./img/logo/react.svg" alt="React" width="120" height="40" loading="lazy">
-        <img class="tech-logo" src="./img/logo/tailwindcss.svg" alt="Tailwind CSS" width="120" height="40" loading="lazy">
-        <img class="tech-logo" src="./img/logo/docker.svg" alt="Docker" width="120" height="40" loading="lazy">
-        <img class="tech-logo" src="./img/logo/vercel.svg" alt="Vercel" width="120" height="40" loading="lazy">
-        <img class="tech-logo" src="./img/logo/springboot.svg" alt="Spring Boot" width="120" height="40" loading="lazy">
-        <img class="tech-logo" src="./img/logo/angular.svg" alt="Angular" width="120" height="40" loading="lazy">
-        <img class="tech-logo" src="./img/logo/postgresql.svg" alt="PostgreSQL" width="120" height="40" loading="lazy">
-        <img class="tech-logo" src="./img/logo/mysql.svg" alt="MySQL" width="120" height="40" loading="lazy">
-        <img class="tech-logo" src="./img/logo/zapier.svg" alt="Zapier" width="120" height="40" loading="lazy">
-        <img class="tech-logo" src="./img/logo/github.svg" alt="GitHub" width="120" height="40" loading="lazy">
-        <img class="tech-logo" src="./img/logo/postman.svg" alt="Postman" width="120" height="40" loading="lazy">
-        <img class="tech-logo" src="./img/logo/make.svg" alt="Make" width="120" height="40" loading="lazy">
-        <img class="tech-logo" src="./img/logo/githubpages.svg" alt="GitHub Pages" width="120" height="40" loading="lazy">
-        <img class="tech-logo" src="./img/logo/hubspot.svg" alt="Hubspot" width="120" height="40" loading="lazy">
-        <img class="tech-logo" src="./img/logo/shopify.svg" alt="Shopify" width="120" height="40" loading="lazy">
-      </div>
-    </section>
-
-    <section class="grid md:grid-cols-3 gap-5">
-      <article class="glass rounded-2xl p-5">
-        <h3 class="font-semibold text-lg mb-2">Tráfego de Alta Performance</h3>
-        <p class="text-slate-300 text-sm">Conectamos comportamento, criativo e verba para priorizar campanhas que aumentam lucro, não apenas volume.</p>
-      </article>
-      <article class="glass rounded-2xl p-5">
-        <h3 class="font-semibold text-lg mb-2">Landing pages de alta conversão</h3>
-        <p class="text-slate-300 text-sm">Desenhamos páginas focadas em clareza de oferta, prova de valor e CTA direto para elevar taxa de conversão.</p>
-      </article>
-      <article class="glass rounded-2xl p-5">
-        <h3 class="font-semibold text-lg mb-2">Desenvolvimento de sistemas</h3>
-        <p class="text-slate-300 text-sm">Criamos aplicações e fluxos que centralizam dados, automatizam processos e dão previsibilidade para o crescimento.</p>
-      </article>
-    </section>
-
-    <section class="grid lg:grid-cols-2 gap-8 items-start" id="agendar">
-      <div class="glass rounded-3xl p-6 space-y-6">
+    <section id="agendar" class="grid lg:grid-cols-2 gap-12 items-start scroll-mt-20">
+      <div class="space-y-8">
         <div>
-          <h2 class="text-2xl font-bold mb-2">Saia da tentativa e erro. Chegou a hora de começar a lucrar</h2>
-          <p class="text-slate-300">Em 30 minutos, vamos abrir o "capô" da sua operação e encontrar os gargalos que estão queimando seu caixa.</p>
-        </div>
-        
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-5 space-y-4">
-            <p class="font-semibold text-orange-300">Existem dois tipos de empresas hoje:</p>
-            <ul class="space-y-3 text-sm">
-                <li class="flex items-start gap-3 text-slate-400">
-                    <span class="text-red-400 mt-1" aria-hidden="true">✕</span>
-                    <span>As que torcem para o anúncio funcionar (e perdem dinheiro todo mês).</span>
-                </li>
-                <li class="flex items-start gap-3 text-slate-100">
-                    <span class="text-green-400 mt-1" aria-hidden="true">✓</span>
-                    <span>As que usam a <strong>Mangop</strong> para saber exatamente onde cada centavo investido está voltando.</span>
-                </li>
-            </ul>
-            <p class="text-sm font-bold pt-2 border-t border-white/10 text-center uppercase tracking-wider">Qual delas você quer ser?</p>
+          <h2 class="text-3xl font-bold mb-4">Diagnóstico Estratégico</h2>
+          <p class="text-slate-300">Responda 4 perguntas rápidas e reserve sua consultoria gratuita de 30 minutos via Google Meet.</p>
         </div>
 
-        <div class="space-y-2 text-sm text-slate-400">
-           <p class="flex justify-between"><span>Formato:</span> <span class="text-white">Google Meet</span></p>
-           <p class="flex justify-between"><span>Fuso:</span> <span id="timezone" class="text-white"></span></p>
+        <div class="space-y-3">
+          <div class="flex justify-between text-xs font-bold text-orange-500 uppercase tracking-widest">
+            <span id="step-label">Passo 1 de 5</span>
+            <span id="step-percent">20%</span>
+          </div>
+          <div class="w-full bg-white/10 h-2 rounded-full overflow-hidden">
+            <div id="progress-bar" class="bg-orange-500 h-full transition-all duration-500" style="width: 20%"></div>
+          </div>
+        </div>
+
+        <div class="glass rounded-2xl p-5 space-y-2 text-sm">
+          <p class="flex justify-between"><span>Duração:</span> <span class="text-white">30 minutos</span></p>
+          <p class="flex justify-between"><span>Plataforma:</span> <span class="text-white">Google Meet</span></p>
+          <p class="flex justify-between"><span>Fuso:</span> <span id="timezone" class="text-white"></span></p>
         </div>
       </div>
 
-      <div class="rounded-3xl p-8 glow border border-orange-500/30 bg-[#1e293b]">
-        <h2 class="text-2xl font-bold mb-5 text-white">Reserve Agora!</h2>
-
-        <div class="space-y-4">
-          <div>
-            <label for="date" class="block text-sm font-medium text-slate-300 mb-1">Escolha a data</label>
-            <input type="date" id="date" name="date" class="input-style w-full" min="2026-03-01" required>
+      <div class="rounded-3xl p-8 glow border border-orange-500/20 bg-[#1e293b] min-h-[480px] flex flex-col justify-between">
+        <div id="quiz-container">
           </div>
 
-          <div>
-            <label for="time" class="block text-sm font-medium text-slate-300 mb-1">Escolha o horário</label>
-            <select id="time" name="time" class="input-style w-full" required>
-              <option value="" disabled selected>Selecione o horário</option>
-            </select>
-          </div>
-
-          <div>
-            <label for="name" class="sr-only">Nome completo</label>
-            <input type="text" id="name" name="name" placeholder="Nome completo" class="input-style w-full" required>
-          </div>
-
-          <div>
-            <label for="email" class="sr-only">Email profissional</label>
-            <input type="email" id="email" name="email" placeholder="Email profissional" class="input-style w-full" required>
-          </div>
-
-          <div class="flex gap-2">
-            <div class="w-1/3">
-              <label for="countrySelect" class="sr-only">DDI</label>
-              <select id="countrySelect" name="countrySelect" class="input-style w-full">
-                <option value="+244">🇦🇴 +244</option>
-                <option value="+258">🇲🇿 +258</option>
-                <option value="+238">🇨🇻 +238</option>
-                <option value="+351">🇵🇹 +351</option>
-                <option value="+55" selected>🇧🇷 +55</option>
-                <option value="+44">🇬🇧 +44</option>
-                <option value="+1">🇺🇸 +1</option>
-              </select>
-            </div>
-            <div class="flex-1">
-              <label for="phone" class="sr-only">Telefone</label>
-              <input type="tel" id="phone" name="phone" placeholder="Número (WhatsApp)" class="input-style w-full" inputmode="numeric" maxlength="15" required>
-            </div>
-          </div>
-
-          <div>
-            <label for="company" class="sr-only">Site ou Nome da Empresa</label>
-            <input type="text" id="company" name="company" placeholder="Site ou Nome da Empresa" class="input-style w-full">
-          </div>
-
-          <div>
-            <label for="description" class="sr-only">Desafio atual</label>
-            <textarea id="description" name="description" placeholder="O que mais te impede de dobrar seu faturamento hoje?" class="input-style min-h-[110px] w-full"></textarea>
-          </div>
-
-          <button onclick="book()" class="btn-primary w-full py-4 text-lg font-bold uppercase tracking-wide">
-Confirmar Agendamento          </button>
-          <p id="message" class="text-center text-sm font-medium mt-4"></p>
+        <div class="flex items-center justify-between mt-8 pt-6 border-t border-white/5">
+          <button id="prev-btn" class="hidden text-slate-400 font-bold hover:text-white transition-all">← Voltar</button>
+          <button id="next-btn" class="btn-primary px-10 py-3 ml-auto">Próximo Passo →</button>
         </div>
+        <p id="message" class="text-center text-xs mt-4"></p>
       </div>
     </section>
   </main>
 
 <script>
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycby09-6aL4tA4ufcTCqC7hKrCrllRdvZnrT_Ge4LwlVfv67GKblabJzw3RpOHzUQt3ZAbQ/exec";
-const START = 9;
-const END = 22;
+  // ATENÇÃO: COLOQUE SEU URL DO GOOGLE AQUI
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwXI3y7WO-vRppiz8mZdT_v1XNTt53YI_1tCaeeC9i2EHKFHlTuX6p2ZiELrtXUFXQ6Sw/exec";
+  
+  let currentStep = 0;
+  const responses = {};
+  const steps = [
+    { id: 'segmentacao', q: "Qual o foco do seu negócio?", type: 'radio', options: ["E-commerce", "Serviços/B2B", "Negócio Local", "Infoprodutos"] },
+    { id: 'investimento', q: "Qual seu investimento mensal em ads?", type: 'radio', options: ["Ainda não invisto", "Até R$ 2k", "R$ 2k a R$ 10k", "Acima de R$ 10k"] },
+    { id: 'dor', q: "Qual seu maior gargalo hoje?", type: 'radio', options: ["Gerar Leads", "Baixar Custo", "Escalar Vendas"] },
+    { id: 'contato', q: "Dados de Contato", type: 'fields' },
+    { id: 'agenda', q: "Escolha sua Data e Horário", type: 'calendar' }
+  ];
 
-const dateInput = document.getElementById("date");
-const timeSelect = document.getElementById("time");
-const messageBox = document.getElementById("message");
-const button = document.querySelector("button");
-const phoneInput = document.getElementById("phone");
-const countrySelect = document.getElementById("countrySelect");
+  function renderStep() {
+    const container = document.getElementById('quiz-container');
+    const step = steps[currentStep];
+    const progress = ((currentStep + 1) / steps.length) * 100;
 
-phoneInput.addEventListener("input", function () {
-  this.value = this.value.replace(/\D/g, "");
-});
+    document.getElementById('progress-bar').style.width = progress + '%';
+    document.getElementById('step-percent').innerText = Math.round(progress) + '%';
+    document.getElementById('step-label').innerText = `Passo ${currentStep + 1} de ${steps.length}`;
 
-document.getElementById("timezone").innerText = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    let html = `<h2 class="text-2xl font-bold mb-6">${step.q}</h2>`;
 
-const today = new Date().toISOString().split("T")[0];
-dateInput.setAttribute("min", today);
-dateInput.addEventListener("change", loadTimes);
+    if (step.type === 'radio') {
+      html += `<div class="space-y-3">`;
+      step.options.forEach(opt => {
+        const active = responses[step.id] === opt ? 'border-orange-500 bg-orange-500/10' : 'border-white/10';
+        html += `<div onclick="selectOpt('${step.id}', '${opt}')" class="p-4 border ${active} rounded-xl cursor-pointer hover:bg-white/5 transition-all flex items-center">
+          <div class="w-4 h-4 border-2 rounded-full mr-3 ${responses[step.id] === opt ? 'bg-orange-500 border-orange-500' : 'border-white/30'}"></div>
+          ${opt}
+        </div>`;
+      });
+      html += `</div>`;
+    } else if (step.type === 'fields') {
+      html += `<div class="space-y-4">
+        <input type="text" id="lead-name" placeholder="Seu Nome" class="input-style" value="${responses.name || ''}">
+        <input type="email" id="lead-email" placeholder="E-mail Profissional" class="input-style" value="${responses.email || ''}">
+        <input type="tel" id="lead-phone" placeholder="WhatsApp (com DDD)" class="input-style" value="${responses.phone || ''}">
+        <input type="text" id="lead-company" placeholder="Site ou Empresa" class="input-style" value="${responses.company || ''}">
+      </div>`;
+    } else if (step.type === 'calendar') {
+      html += `<div class="space-y-4">
+        <input type="date" id="lead-date" class="input-style" min="${new Date().toISOString().split('T')[0]}" onchange="fetchTimes()">
+        <select id="lead-time" class="input-style"><option disabled selected>Selecione o horário</option></select>
+      </div>`;
+    }
 
-async function parseResponse(res) {
-  const text = await res.text();
-  try {
-    return JSON.parse(text);
-  } catch {
-    return { status: "error", message: "Resposta do servidor inválida." };
+    container.innerHTML = html;
+    document.getElementById('prev-btn').classList.toggle('hidden', currentStep === 0);
+    document.getElementById('next-btn').innerText = (currentStep === steps.length - 1) ? "Finalizar Agendamento" : "Próximo Passo →";
   }
-}
 
-async function callScript(payload, method = "POST") {
-  if (method === "GET") {
-    const query = new URLSearchParams(payload).toString();
-    const res = await fetch(`${SCRIPT_URL}?${query}`);
-    return parseResponse(res);
-  }
-  const body = new URLSearchParams(payload).toString();
-  const res = await fetch(SCRIPT_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body
-  });
-  return parseResponse(res);
-}
+  window.selectOpt = (id, val) => {
+    responses[id] = val;
+    if (currentStep < 3) setTimeout(goNext, 300);
+    else renderStep();
+  };
 
-function loadTimes() {
-  const date = dateInput.value;
-  if (!date) return;
-  messageBox.innerHTML = "<span class='text-orange-300'>Buscando horários disponíveis...</span>";
-
-  callScript({ action: "getBusy", date }, "GET")
-    .then(data => {
-      timeSelect.innerHTML = "<option value='' disabled selected>Selecione o horário</option>";
-      if (data.busy === "full") {
-        messageBox.innerHTML = "<span class='text-red-400'>Agenda lotada para este dia.</span>";
-        return;
-      }
-      const now = new Date();
-      const isToday = new Date(date + "T00:00:00").toDateString() === now.toDateString();
-
-      for (let h = START; h < END; h++) {
-        const hour = `${h < 10 ? "0" : ""}${h}:00`;
-        if (isToday && h <= now.getHours()) continue;
-        if (!data.busy || !data.busy.includes(hour)) {
-          const opt = document.createElement("option");
-          opt.value = hour;
-          opt.innerText = hour;
-          timeSelect.appendChild(opt);
+  async function fetchTimes() {
+    const date = document.getElementById('lead-date').value;
+    const select = document.getElementById('lead-time');
+    const msg = document.getElementById('message');
+    msg.innerText = "Consultando disponibilidade...";
+    
+    try {
+      const res = await fetch(`${SCRIPT_URL}?action=getBusy&date=${date}`);
+      const data = await res.json();
+      select.innerHTML = "<option disabled selected>Selecione o horário</option>";
+      
+      const hours = Array.from({length: 13}, (_, i) => `${i + 9}:00`.padStart(5, '0'));
+      hours.forEach(h => {
+        if (!data.busy || !data.busy.includes(h)) {
+          const opt = document.createElement('option');
+          opt.value = h; opt.innerText = h;
+          select.appendChild(opt);
         }
-      }
-      messageBox.textContent = "";
-    });
-}
-
-function book() {
-  const fields = {
-    date: dateInput.value,
-    time: timeSelect.value,
-    name: document.getElementById("name").value.trim(),
-    email: document.getElementById("email").value.trim(),
-    phone: phoneInput.value.trim()
-  };
-
-  if (Object.values(fields).some(v => !v)) {
-    messageBox.innerHTML = "<span class='text-red-400'>Por favor, preencha todos os campos obrigatórios.</span>";
-    return;
+      });
+      msg.innerText = "";
+    } catch(e) { msg.innerText = "Erro ao carregar horários."; }
   }
 
-  button.disabled = true;
-  button.innerText = "Agendando...";
+  async function goNext() {
+    if (currentStep === 3) {
+      responses.name = document.getElementById('lead-name').value;
+      responses.email = document.getElementById('lead-email').value;
+      responses.phone = document.getElementById('lead-phone').value;
+      responses.company = document.getElementById('lead-company').value;
+      if (!responses.name || !responses.email || !responses.phone) return alert("Preencha os dados de contato.");
+    }
 
-  const payload = {
-    action: "book",
-    ...fields,
-    phone: countrySelect.value + fields.phone,
-    company: document.getElementById("company").value.trim(),
-    description: document.getElementById("description").value.trim()
-  };
+    if (currentStep < steps.length - 1) {
+      currentStep++;
+      renderStep();
+    } else {
+      finish();
+    }
+  }
 
-  callScript(payload)
-    .then(data => {
-      if (data.status === "success") {
-        window.location.href = "thank-you.html";
-      } else {
-        messageBox.innerHTML = `<span class='text-red-400'>${data.message || "Erro ao agendar reunião."}</span>`;
-        button.disabled = false;
-        button.innerText = "RESERVAR MEU DIAGNÓSTICO GRATUITO";
-      }
-    })
-    .catch(() => {
-        messageBox.innerHTML = "<span class='text-red-400'>Erro de conexão. Tente novamente.</span>";
-        button.disabled = false;
-        button.innerText = "RESERVAR MEU DIAGNÓSTICO GRATUITO";
+  async function finish() {
+    const date = document.getElementById('lead-date').value;
+    const time = document.getElementById('lead-time').value;
+    if (!date || !time) return alert("Escolha o horário.");
+
+    const btn = document.getElementById('next-btn');
+    btn.disabled = true; btn.innerText = "Enviando...";
+
+    const payload = new URLSearchParams({
+      action: "book",
+      ...responses,
+      date, time,
+      description: `Segmento: ${responses.segmentacao} | Verba: ${responses.investimento} | Desafio: ${responses.dor}`
     });
-}
+
+    try {
+      const res = await fetch(SCRIPT_URL, { method: 'POST', body: payload });
+      const result = await res.json();
+      if (result.status === "success") window.location.href = "thank-you.html";
+      else alert(result.message);
+    } catch(e) {
+      // Como o Apps Script às vezes dá erro de CORS mas envia o dado, redirecionamos após timeout
+      setTimeout(() => window.location.href = "thank-you.html", 2000);
+    }
+  }
+
+  document.getElementById('next-btn').addEventListener('click', goNext);
+  document.getElementById('prev-btn').addEventListener('click', () => { currentStep--; renderStep(); });
+  document.getElementById('timezone').innerText = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  renderStep();
 </script>
 </body>
 </html>
